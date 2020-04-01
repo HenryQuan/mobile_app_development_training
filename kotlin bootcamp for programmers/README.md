@@ -44,3 +44,20 @@ I think I know most of the content but it might be good to study it again to hav
 - `data class xxx` for data containers, it can print all properties easily. Basically, a class with many useful functions in it by default
 - `val ( a, b, c ) = something` to take it out of the object, `decomposiiton`
 - `object xxx { }` for singleton, `enum class xxx { }` for enums (you can have methods and properties in it), `sealed class xxx { }` (it can have subclasses only inside the same file) for safer type check? (because kotlin knows all subclasses)
+
+## Beyond the basis
+### Pairs
+- `a to b` to make a pair and use `first` and `second` to take `a` and `b`, you can also chain pairs (`a to b to c to d`), you can also add `()` to group pairs
+- `val (a, b) = p` to get values out of a pair
+- `Pairs` is good for returning multiple values
+- you also have `Triple` for 3 values
+### Collections
+- `List` has many useful functions
+- `Map` -> `mapOf(a to b, c to d)` and get `b` by using `xxx[a]`
+### Constant
+- `const val`, compile time, only top level ot `object class`
+- `companion object` for class level constants
+### Extensions
+- `func String.hasUpperCase()`, type.method, you don't even need to use `this`, just use lambda
+- you can also add extension properties
+
