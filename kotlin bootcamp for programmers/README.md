@@ -31,3 +31,16 @@ I think I know most of the content but it might be good to study it again to hav
 - `update(xx) {xx -> xx }`, this is actually use another lambda function (callback)
 
 ## Classes
+- `get() = xxxxx` after `val xx`
+- `public` by default, there are also `internal` and `private`
+- `internal` -> same module, `private` -> only inside the class (not even subclasses), `protected` -> like `private` but subclasses can use
+- `class myFancyClass(var a: Int, var b: Int = 100)`, constructor
+- `constructor(c: Int) : this()`
+- `init { }`, you have multiple init and it will always run before the secondary constructor
+- `open class a : b` for inheritance, `open` means non-final
+- `abstract` and `interface`
+-  **you can use `object` instead of `class` to make it singleton**
+- `interface by xxx` calls everything in `xxx`, `interface delegation`, kinda like implementation of that interface and it will be called everytime
+- `data class xxx` for data containers, it can print all properties easily. Basically, a class with many useful functions in it by default
+- `val ( a, b, c ) = something` to take it out of the object, `decomposiiton`
+- `object xxx { }` for singleton, `enum class xxx { }` for enums (you can have methods and properties in it), `sealed class xxx { }` (it can have subclasses only inside the same file) for safer type check? (because kotlin knows all subclasses)
