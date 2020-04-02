@@ -60,4 +60,23 @@ I think I know most of the content but it might be good to study it again to hav
 ### Extensions
 - `func String.hasUpperCase()`, type.method, you don't even need to use `this`, just use lambda
 - you can also add extension properties
+### Generics
+- I don't really use generics but it is similar
+### Annotation
+- you can write your own
+- `annotation class xxx { }`
+### Label break
+- you can break top level loop (so don't need to break multiple times)
+- `break@loop` and `loop@ for () {}`
 
+## Functional Manipulation
+### Higher order functions
+- `with (xxx) { this.xxx }`, `this` is not necessary
+- `fun xxx(xx: String, block: String.() -> Unit) {}`, you can just call `block()`
+- `run`, `apply`, `let` (chaining)
+- `lambda` is also an object and is created every time
+- `inline fun xxx`, with inline, no objects will be created, good for simple function because it increase the size of the app
+- `SAM, single abstract method`, interface with only one method
+- `val runnable = object : Runnable { }`
+
+There are much more and I have a lot more to learn but the basics should be fine.
