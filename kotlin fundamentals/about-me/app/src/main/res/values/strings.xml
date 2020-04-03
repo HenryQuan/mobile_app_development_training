@@ -2,4 +2,18 @@
     <string name="app_name">About Me</string>
     <string name="my_name">Henry Quan</string>
     <string name="yellow_star">yellow star</string>
+    <string name="long_text">This is a long text\n
+        This is a long textThis is a long textThis is a long textThis is a long textThis is a long textThis is a long textThis is a long textThis is a long text\n
+        This is a long text\nThis is a long text\n
+        This is a long text\nThis is a long text\n
+        This is a long text\nThis is a long text\n
+        This is a long text\nThis is a long text\n
+        This is a long text\nThis is a long text\n
+        This is a long text\nThis is a long text\n
+        This is a long text\nThis is a long text\n
+        This is a long text\nThis is a long text\n
+        This is a long text\nThis is a long text\n
+        This is a long text\nThis is a long text\n
+        This is a long text\nThis is a long text\n
+    </string>
 </resources>
