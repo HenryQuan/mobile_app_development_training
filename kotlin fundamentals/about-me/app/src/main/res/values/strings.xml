@@ -16,4 +16,6 @@
         This is a long text\nThis is a long text\n
         This is a long text\nThis is a long text\n
     </string>
+    <string name="enter_your_nickname">Enter your nickname</string>
+    <string name="done">Done</string>
 </resources>
