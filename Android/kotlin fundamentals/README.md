@@ -7,3 +7,20 @@
 
 ## Chapter 2, Layouts
 - `dp` is different on all devices
+- visibility, `gone` is not rendered, `invisible` is rendered
+- data binding to prevent `findViewById` (it can be quite slow), data binding determines everything in compile time
+~~~kotlin
+dataBinding {
+    enabled = true
+}
+
+wrap layout with
+<layout></layout>
+
+private lateinit var binding: ActivityMainBinding
+binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+~~~
+- `invalidateAll()` to refresh UI but is it necessary?
+- `android:text="@={myName.nickname}"`, you use `@={}` to bind data inside xml
+
+

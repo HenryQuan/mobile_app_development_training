@@ -8,31 +8,45 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
+import com.yihengquan.aboutme.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    // The type is determined by the layout file name
+    private lateinit var binding: ActivityMainBinding
+    private val myName = MyName("Yiheng Quan")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        findViewById<Button>(R.id.done_button).setOnClickListener {
-            // "it" is the button
+//        setContentView(R.layout.activity_main)
+        // Bind
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.myName = myName
+//        findViewById<Button>(R.id.done_button).setOnClickListener {
+//            // "it" is the button
+//            addNickname(it)
+//        }
+        binding.doneButton.setOnClickListener {
             addNickname(it)
         }
     }
 
     private fun addNickname(view: View) {
-        val nickname_edit: EditText = findViewById(R.id.nickname_edit)
-        val nickname_text: TextView = findViewById(R.id.nickname_text)
+        // Prevent writing binding 4 times
+        binding.apply {
+            this.myName?.nickname = nicknameEdit.text.toString()
+            // refresh UI?
+            invalidateAll()
+            nicknameEdit.visibility = View.GONE
+            nicknameText.visibility = View.VISIBLE
+            view.visibility = View.GONE
+        }
 
-        nickname_text.text = nickname_edit.text
         // Hide the keyboard
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken, 0)
 
-        nickname_edit.visibility = View.GONE
-        nickname_text.visibility = View.VISIBLE
-        view.visibility = View.GONE
     }
 
 }
