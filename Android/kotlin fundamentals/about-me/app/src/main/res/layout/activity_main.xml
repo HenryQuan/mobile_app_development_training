@@ -22,9 +22,11 @@
         android:layout_height="wrap_content"
         android:hint="@string/enter_your_nickname"
         android:inputType="textPersonName|textImeMultiLine"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:autofillHints="" />
 
     <Button
+        android:id="@+id/done_button"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
