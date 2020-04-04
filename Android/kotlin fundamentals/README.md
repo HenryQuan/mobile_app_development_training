@@ -22,5 +22,5 @@ binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 ~~~
 - `invalidateAll()` to refresh UI but is it necessary?
 - `android:text="@={myName.nickname}"`, you use `@={}` to bind data inside xml
-
-
+- `Constraint Layout`
+- 
