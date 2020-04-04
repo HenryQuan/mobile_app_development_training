@@ -23,4 +23,5 @@ binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 - `invalidateAll()` to refresh UI but is it necessary?
 - `android:text="@={myName.nickname}"`, you use `@={}` to bind data inside xml
 - `Constraint Layout`
-- 
+- `Ratio`, `Chain` (like space-around, space-between)
+- Kotlin has an extension to use id directly but it is actually calling `_findCachedViewById` so data binding is still better I guess
