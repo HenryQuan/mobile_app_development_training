@@ -33,4 +33,6 @@ The moment, I have been waiting for...
 - `Activity` is a stack and `Fragment`also has stack but in the same `Activity`
 - all apps need a fixed starting point just like iOS
 - `navigation.xml` is just like `storyboard`
-- 
+- `NavHostFragment` handles navigation for fragments
+- `Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment)`, android is actually better because you need to type the string manually like iOS and everything has generated for you
+
