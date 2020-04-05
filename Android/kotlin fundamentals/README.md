@@ -28,4 +28,9 @@ binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 - `baseline`, if a button is attached to another button's baseline, the button will follow that button for the margin top and bottom
 
 ## Chapter 3, Navigation
-
+The moment, I have been waiting for...
+- `Activity` can have multiple `Fragment`
+- `Activity` is a stack and `Fragment`also has stack but in the same `Activity`
+- all apps need a fixed starting point just like iOS
+- `navigation.xml` is just like `storyboard`
+- 
