@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,14 +16,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diamond" translatesAutoresizingMaskIntoConstraints="NO" id="4xx-mV-5fj">
-                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <rect key="frame" x="143" y="401" width="128" height="94"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Rha-4U-Elt"/>
-                                    <constraint firstAttribute="height" constant="300" id="iEN-dm-cqF"/>
+                                    <constraint firstAttribute="width" secondItem="4xx-mV-5fj" secondAttribute="height" multiplier="343:251" id="1SD-mB-9FF"/>
+                                    <constraint firstAttribute="width" constant="128" id="vtN-K2-WKD"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Am Rich" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0y-tM-TKc">
-                                <rect key="frame" x="16" y="242" width="382" height="48"/>
+                                <rect key="frame" x="16" y="503" width="382" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="JKf-yE-afi"/>
                                 </constraints>
@@ -32,13 +32,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F0y-tM-TKc" secondAttribute="trailing" constant="16" id="1fS-WX-f0q"/>
-                            <constraint firstItem="4xx-mV-5fj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MTP-c5-HLX"/>
+                            <constraint firstItem="4xx-mV-5fj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MXi-KW-9Zx"/>
                             <constraint firstItem="F0y-tM-TKc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ag9-j2-ZXd"/>
-                            <constraint firstItem="4xx-mV-5fj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gXO-zg-koN"/>
-                            <constraint firstItem="4xx-mV-5fj" firstAttribute="top" secondItem="F0y-tM-TKc" secondAttribute="bottom" constant="8" id="kzL-2N-pQA"/>
+                            <constraint firstItem="4xx-mV-5fj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dTG-yp-17k"/>
+                            <constraint firstItem="F0y-tM-TKc" firstAttribute="top" secondItem="4xx-mV-5fj" secondAttribute="bottom" constant="8" id="q2r-NK-GH2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
