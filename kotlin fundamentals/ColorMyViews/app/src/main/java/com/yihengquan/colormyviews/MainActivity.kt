@@ -15,13 +15,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setListeners() {
-        val views: List<View> = listOf(box_one_text, box_two_text, box_three_text, box_four_text, box_five_text, root_view)
-        views.forEach {
+        val views: List<View> = listOf(box_one_text, box_two_text, box_three_text,
+            box_four_text, box_five_text, root_view,
+            red_button, yellow_button, blue_button)
+        views.forEach { it ->
             it.setOnClickListener { makeColored(it) }
         }
     }
 
-    fun makeColored(view: View) {
+    private fun makeColored(view: View) {
         when (view.id) {
 
             // Boxes using Color class colors for background
@@ -32,6 +34,11 @@ class MainActivity : AppCompatActivity() {
             R.id.box_three_text -> view.setBackgroundResource(android.R.color.holo_green_light)
             R.id.box_four_text -> view.setBackgroundResource(android.R.color.holo_green_dark)
             R.id.box_five_text -> view.setBackgroundResource(android.R.color.holo_green_light)
+
+            // Buttons
+            R.id.red_button -> box_three_text.setBackgroundResource(R.color.my_red)
+            R.id.yellow_button -> box_four_text.setBackgroundResource(R.color.my_yellow)
+            R.id.blue_button -> box_five_text.setBackgroundResource(R.color.my_blue)
 
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
