@@ -26,3 +26,6 @@ binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 - `Ratio`, `Chain` (like space-around, space-between)
 - Kotlin has an extension to use id directly but it is actually calling `_findCachedViewById` so data binding is still better I guess
 - `baseline`, if a button is attached to another button's baseline, the button will follow that button for the margin top and bottom
+
+## Chapter 3, Navigation
+
