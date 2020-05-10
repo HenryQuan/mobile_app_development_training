@@ -35,6 +35,6 @@ Before everything above was a thing, I think bigger companies either have two te
 
 # What's the best choice?
 It depends on your need. `Flutter` is the best for me because I don't use native features that much.
-- If you are a small team or just a solo like me, `React Native` and `Flutter` are great choices because they are low cost and you get two apps or more with one codebase
+- If you are a small team or just a solo like me, `React Native` and `Flutter` are great choices because they are low cost and you get two apps or more with one single codebase. After that, slowly convert it into native apps if possible
 - For larger companies, native is the way to go because it is `the native`. Xamarin can also be a good choice if you want to share some code and UI. Hardcore C++ might be the traditional way to share code and it might be great as well 
 - Alternatively, you can mix native with `React Native` or `Flutter` so you get the best of both.
