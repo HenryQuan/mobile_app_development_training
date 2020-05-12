@@ -35,4 +35,5 @@ The moment, I have been waiting for...
 - `navigation.xml` is just like `storyboard`
 - `NavHostFragment` handles navigation for fragments
 - `Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment)`, android is actually better because you need to type the string manually like iOS and everything has generated for you
+- pop `inclusive` so it pops until that fragment
 
