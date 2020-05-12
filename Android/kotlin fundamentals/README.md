@@ -36,4 +36,7 @@ The moment, I have been waiting for...
 - `NavHostFragment` handles navigation for fragments
 - `Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment)`, android is actually better because you need to type the string manually like iOS and everything has generated for you
 - pop `inclusive` so it pops until that fragment
-
+- `safe-args` to make sure bundle passed to another fragment is safe
+- `intent`, use system camera, contacts and more. It can be `explicit` (specific) or `implicit` (what you want to do and system will choose the activity).
+    - `intent-filter` is related to how the system knows if the app can handle what another app wants to do
+    - Base on my understanding, it makes sense now why many file manager simply show an intent and you can view the image outside because this way, you don't need to implement an image gallery and video player. However, this is not possible in IOS. They are really different I guess. 
