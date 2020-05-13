@@ -44,4 +44,4 @@ The moment, I have been waiting for...
 - `pop animations` is when destination is poppoed off the stack
 
 ## Chapter 4, Activity & Fragment lifecycle
-- Initialized, Created, Started, Resumed, Started, Created, Destroyed
+- `State` -> Initialized, Created, Started, Resumed and Destroyed
