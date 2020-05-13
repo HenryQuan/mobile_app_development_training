@@ -3,3 +3,4 @@ I am skipping some early sections because I already know most of them and there 
 
 ## Section 4: Collections, Constants & Variables
 - `randomElement()` on array to replace `int.random(range())`
+- `...` is a `range operator`, you can also `..<` and more
