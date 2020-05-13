@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rollBtnTap(_ sender: UIButton) {
-        diceImageView1.image = images[Int.random(in: 0...5)]
+        diceImageView1.image = images.randomElement()
         diceImageView2.image = images[Int.random(in: 0...5)]
     }
 }
