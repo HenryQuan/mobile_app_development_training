@@ -49,3 +49,12 @@ The moment, I have been waiting for...
 - `Application` class is a base class that contains global state for your entire app
     - put everything in global is not good sometimes
     - similar to `global` in javascript
+- The `lifecycle`, I first started the app. I pressed home button and then come back
+    - OnCreate called
+    - onStart called
+    - onResume called,
+    - onPause called
+    - onStop called,
+    - onRestart called
+    - onStart called
+    - onResume called
