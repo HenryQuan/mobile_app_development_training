@@ -7,3 +7,4 @@ I am skipping some early sections because I already know most of them and there 
 
 ## Section 6: Auto Layout and Responsive UIs
 This is quite important and I think it is similar to android's `constraint layout`. For react native or flutter, it is a bit different like how they layout UIs. 
+- `super view` (the entire view) and `safe area` (for iphone X+)
