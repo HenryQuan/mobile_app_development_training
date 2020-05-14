@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
 
     private var revenue = 0
     private var dessertsSold = 0
+    private lateinit var timer: DessertTimer
 
     // Contains all the views
     private lateinit var binding: ActivityMainBinding
@@ -66,6 +67,7 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        timer = DessertTimer(this.lifecycle)
         Timber.i("OnCreate called")
 
         // Use Data Binding to get reference to the views

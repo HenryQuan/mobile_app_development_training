@@ -58,3 +58,8 @@ The moment, I have been waiting for...
     - onRestart called
     - onStart called
     - onResume called
+- If you press `back` button, it will get destoyed after stop. However, if you press home and then, go to the task manager and kill it, nothing will be displayed (no destroyed). If you press task manager in app and kill it, it still get displayed
+- If the activity is still visible, it is either started, resumed or paused (sometimes stop as well)
+- `OnStart` can be called multiple times but `OnCreated` is once only when the activity is created
+- `OnRestart` is replacing `OnCreate` if the activity is back again from the background
+- `LifeCycleObserver`, the timer will control itself. This is really powerful
