@@ -45,3 +45,7 @@ The moment, I have been waiting for...
 
 ## Chapter 4, Activity & Fragment lifecycle
 - `State` -> Initialized, Created, Started, Resumed and Destroyed
+- `Log` has 6 levels, `Verbose` -> `Debug` -> `Info` -> `Warn` -> `Error` -> `Assert`
+- `Application` class is a base class that contains global state for your entire app
+    - put everything in global is not good sometimes
+    - similar to `global` in javascript
