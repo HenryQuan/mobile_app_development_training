@@ -63,3 +63,7 @@ The moment, I have been waiting for...
 - `OnStart` can be called multiple times but `OnCreated` is once only when the activity is created
 - `OnRestart` is replacing `OnCreate` if the activity is back again from the background
 - `LifeCycleObserver`, the timer will control itself. This is really powerful
+- `Android` tries save your app current state/data in a bundle but it doesn't work for custom ones
+    - `onSaveInstanceState` can save some small amount of data (100 KB), don't save everything in it or the app might crash
+    - It uses key-value pair like a dictionary
+    - It is only saved like once? (so it doesn't persist)

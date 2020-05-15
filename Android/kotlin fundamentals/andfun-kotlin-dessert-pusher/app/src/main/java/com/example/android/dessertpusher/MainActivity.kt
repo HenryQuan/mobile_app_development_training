@@ -29,6 +29,9 @@ import androidx.lifecycle.LifecycleObserver
 import com.example.android.dessertpusher.databinding.ActivityMainBinding
 import timber.log.Timber
 
+const val REVENUE_KEY = "revenue_key"
+const val DESSERT_SOLD_KEY = "desert_sold_key"
+
 class MainActivity : AppCompatActivity(), LifecycleObserver {
 
     private var revenue = 0
@@ -77,6 +80,11 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
             onDessertClicked()
         }
 
+        if (savedInstanceState != null) {
+            revenue = savedInstanceState.getInt(REVENUE_KEY, 0)
+            dessertsSold = savedInstanceState.getInt(DESSERT_SOLD_KEY, 0)
+        }
+
         // Set the TextViews to the right values
         binding.revenue = revenue
         binding.amountSold = dessertsSold
@@ -113,6 +121,12 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
     override fun onStop() {
         super.onStop()
         Timber.i("onStop called")
+    }
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        outState?.putInt(REVENUE_KEY, revenue)
+        outState?.putInt(DESSERT_SOLD_KEY, dessertsSold)
     }
 
     /**
