@@ -12,3 +12,5 @@ This is quite important and I think it is similar to android's `constraint layou
 
 ## Section 7: Apple Documentation
 - Searcing online is really important as a programmer
+- I used `tag` but Angela used `button.currentTitle`. It also works and actually quite creative for me
+- I would avoid `!` if possible but for this app, it is fine
