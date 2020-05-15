@@ -70,3 +70,4 @@ The moment, I have been waiting for...
 - When I rotate the screen, it actually destoryed the activity and later recreated. What??
 - `Configuration Change`, when the configuration changed, you might want to show a completely new interface. Therefore, Android destroys old activities and recreates them. This is really powerful sometimes. Android is sure complicated. 
 
+## Chapter 5, Application Architecture (UI Layer)
