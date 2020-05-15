@@ -64,6 +64,9 @@ The moment, I have been waiting for...
 - `OnRestart` is replacing `OnCreate` if the activity is back again from the background
 - `LifeCycleObserver`, the timer will control itself. This is really powerful
 - `Android` tries save your app current state/data in a bundle but it doesn't work for custom ones
-    - `onSaveInstanceState` can save some small amount of data (100 KB), don't save everything in it or the app might crash
+    - `onSaveInstanceState` can save some small amount of data (100 KB), don't save everything in it or the app might crash. Always call `super` because it saves some data for you
     - It uses key-value pair like a dictionary
     - It is only saved like once? (so it doesn't persist)
+- When I rotate the screen, it actually destoryed the activity and later recreated. What??
+- `Configuration Change`, when the configuration changed, you might want to show a completely new interface. Therefore, Android destroys old activities and recreates them. This is really powerful sometimes. Android is sure complicated. 
+
