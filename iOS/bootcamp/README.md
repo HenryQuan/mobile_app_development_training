@@ -11,3 +11,4 @@ This is quite important and I think it is similar to android's `constraint layou
 - `UIStackView` is like a normal `View` in react native or `Row/Column` in flutter, people say it is not efficient but I don't know. I prefer layout my views like that, I think react native uses `yoga`. 
 
 ## Section 7: Apple Documentation
+- Searcing online is really important as a programmer
