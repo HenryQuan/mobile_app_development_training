@@ -77,4 +77,7 @@ The moment, I have been waiting for...
 - `ViewModel` doesn't know about activities, fragments or views so no reference to any of them
 - `androidTest` focuses on Android and `test` can run without android (more like code test)
 - `LiveData` is an observable data holder and it is also lifecyle aware. Fragments are observing LiveData and update UI according to it
-
+    - It only updates UI when UI is `on-screen`
+    - It will update UI once the UI is visible again
+    - It cleans up connections automatically
+    - It also observes the `LifeCycle` of the activity or any other things
