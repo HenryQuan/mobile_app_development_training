@@ -15,3 +15,8 @@ This is quite important and I think it is similar to android's `constraint layou
 - I used `tag` but Angela used `button.currentTitle`. It also works and actually quite creative for me
 - I would avoid `!` if possible but for this app, it is fine
 - `DispatchQueue.main.asyncAfter` for delay, async I guess
+
+## Section 8: Control Flow and Optionals
+It is focusing on `if else`, `switch` and optionals. I was a bit confused about optionals before back in 2014. Now, I understand what it means. I was a bit too young to understand maybe.
+- For `switch`, you can use a range operator, `80...100` for a ranged value. This is really powerful and another languages cannot do this because it must be a constant. However, swift supports range
+- 
