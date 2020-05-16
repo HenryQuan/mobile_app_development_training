@@ -21,3 +21,6 @@ It is focusing on `if else`, `switch`, `dictionary` and optionals. I was a bit c
 - For `switch`, you can use a range operator, `80...100` for a ranged value. This is really powerful and another languages cannot do this because it must be a constant. However, swift supports range
 - `?!` optionals is like `maybe` in haskell. The data is in a box and you don't know what's inside. That's why you put a `?` and you can use `!` to force unwrap it but it might be nil. It is good to check if it is nil or not before using it. Also, avoid using `!` unless you are 100% sure that it won't be nil
 - `Timer.scheduledTimer` for a periodic timer
+
+## Section 9: Design Patterns and Code Structuring
+This is really important for development because it is useful not only for iOS but almost everything UI related
