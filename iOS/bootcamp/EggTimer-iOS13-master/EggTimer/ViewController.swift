@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -37,6 +38,9 @@ class ViewController: UIViewController {
                 print("Completed!")
                 self.timerProgressView.progress = 1.0
                 self.titleLabel.text = "Done"
+                // Play alarm sound?
+                // From https://stackoverflow.com/a/31126202
+                AudioServicesPlayAlertSound(SystemSoundID(1322))
             }
         }
         timer.fire()
