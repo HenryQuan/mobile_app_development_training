@@ -74,3 +74,7 @@ The moment, I have been waiting for...
 - There are many great architectures. For this chapter, it is mainly controller - viewmodel - data
 - `ViewModels`, it can survive with configuration changes and no restrictions on size (not too much of course)
 - `UI Controller` only controls the UI and user events and `it doesn't hold any data`. `ViewModels` are holding data for UI and `it makes decision what to do` 
+- `ViewModel` doesn't know about activities, fragments or views so no reference to any of them
+- `androidTest` focuses on Android and `test` can run without android (more like code test)
+- `LiveData` is an observable data holder and it is also lifecyle aware. Fragments are observing LiveData and update UI according to it
+
