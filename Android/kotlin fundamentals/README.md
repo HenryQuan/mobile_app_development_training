@@ -73,4 +73,4 @@ The moment, I have been waiting for...
 ## Chapter 5, Application Architecture (UI Layer)
 - There are many great architectures. For this chapter, it is mainly controller - viewmodel - data
 - `ViewModels`, it can survive with configuration changes and no restrictions on size (not too much of course)
-
+- `UI Controller` only controls the UI and user events and `it doesn't hold any data`. `ViewModels` are holding data for UI and `it makes decision what to do` 
