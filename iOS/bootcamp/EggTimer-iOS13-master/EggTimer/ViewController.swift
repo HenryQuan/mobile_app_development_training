@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 
     @IBAction func hardnessSelected(_ sender: UIButton) {
         let hardness = sender.currentTitle
+        self.titleLabel.text = hardness
         let time = eggTimes[hardness!]! * 60
         var currentTime = 0
         
@@ -28,13 +29,14 @@ class ViewController: UIViewController {
         timer.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (t) in
             if currentTime < time {
-                self.timerProgressView.progress = Float(currentTime * 100 / time) / 100
+                self.timerProgressView.progress = Float(currentTime) / Float(time)
                 print("\(currentTime)s - \(time)s")
                 currentTime += 1
             } else {
                 t.invalidate()
                 print("Completed!")
                 self.timerProgressView.progress = 1.0
+                self.titleLabel.text = "Done"
             }
         }
         timer.fire()
