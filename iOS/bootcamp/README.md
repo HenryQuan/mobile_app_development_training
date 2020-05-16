@@ -17,6 +17,6 @@ This is quite important and I think it is similar to android's `constraint layou
 - `DispatchQueue.main.asyncAfter` for delay, async I guess
 
 ## Section 8: Control Flow and Optionals
-It is focusing on `if else`, `switch` and optionals. I was a bit confused about optionals before back in 2014. Now, I understand what it means. I was a bit too young to understand maybe.
+It is focusing on `if else`, `switch`, `dictionary` and optionals. I was a bit confused about optionals before back in 2014. Now, I understand what it means. I was a bit too young to understand maybe.
 - For `switch`, you can use a range operator, `80...100` for a ranged value. This is really powerful and another languages cannot do this because it must be a constant. However, swift supports range
-- 
+- `?!` optionals is like `maybe` in haskell. The data is in a box and you don't know what's inside. That's why you put a `?` and you can use `!` to force unwrap it but it might be nil. It is good to check if it is nil or not before using it. Also, avoid using `!` unless you are 100% sure that it won't be nil
