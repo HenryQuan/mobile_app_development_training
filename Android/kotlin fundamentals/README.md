@@ -81,3 +81,4 @@ The moment, I have been waiting for...
     - It will update UI once the UI is visible again
     - It cleans up connections automatically
     - It also observes the `LifeCycle` of the activity or any other things
+- Make fields `private` so that you can have better controls over them. `private var _xxx` and make a public getter. This is what I do in Flutter if I am not too lazy. I don't make them private sometimes because it is not necessary? but I do use getters to do some calculations or conversions.
