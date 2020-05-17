@@ -73,7 +73,7 @@ The moment, I have been waiting for...
 ## Chapter 5, Application Architecture (UI Layer)
 - There are many great architectures. For this chapter, it is mainly controller - viewmodel - data
 - `ViewModels`, it can survive with configuration changes and no restrictions on size (not too much of course)
-- `UI Controller` only controls the UI and user events and `it doesn't hold any data`. `ViewModels` are holding data for UI and `it makes decision what to do` 
+- `UI Controller` only controls the UI and user events and `it doesn't hold any data`. `ViewModels` are holding data for UI and `it makes decisions for what to do` 
 - `ViewModel` doesn't know about activities, fragments or views so no reference to any of them
 - `androidTest` focuses on Android and `test` can run without android (more like code test)
 - `LiveData` is an observable data holder and it is also lifecyle aware. Fragments are observing LiveData and update UI according to it
@@ -81,4 +81,4 @@ The moment, I have been waiting for...
     - It will update UI once the UI is visible again
     - It cleans up connections automatically
     - It also observes the `LifeCycle` of the activity or any other things
-- Make fields `private` so that you can have better controls over them. `private var _xxx` and make a public getter. This is what I do in Flutter if I am not too lazy. I don't make them private sometimes because it is not necessary? but I do use getters to do some calculations or conversions.
+- Make fields `private` so that you can have better controls over them. `private var _xxx` and make a public getter. This is what I do in Flutter if I am not too lazy. I don't make them private sometimes because it is not necessary? but I do use getters to do some calculations or conversions. It is great to do it for everything
