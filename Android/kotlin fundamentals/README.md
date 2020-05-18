@@ -87,4 +87,10 @@ The moment, I have been waiting for...
 - `DataBinding` to remove more codes, you can put them in the xml inside `data` tag and use `@{() -> xxx}` to call methods
     - You can even remove observe functions so it works with observable objects and use `@{}` to set the value
 - You can put a formatting string in `strings.xml` like `\"%s\"` and `Score: %d` so you can put value in and be formatted nicely
-
+~~~
+val currentTimeString = Transformations.map(currentTime) { time ->
+    DateUtils.formatElapsedTime(time)
+}
+~~~
+- You can use transformation to format the time but I think I just skipped it because my time is a string. This is like writing some getters in Flutter because it is basically transforming some data fields
+- `vibrate` can be useful if used properly I guess
