@@ -96,3 +96,4 @@ val currentTimeString = Transformations.map(currentTime) { time ->
 - `vibrate` can be useful if used properly I guess
 
 ## Chapter 6, Application Architecture (Persistence)
+Database with `room`, I learnt about database in one of my courses but I haven't really used it in any apps yet so it might be a great chance to use it
