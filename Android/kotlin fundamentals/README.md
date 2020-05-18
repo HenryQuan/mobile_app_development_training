@@ -83,3 +83,5 @@ The moment, I have been waiting for...
     - It also observes the `LifeCycle` of the activity or any other things
 - Make fields `private` so that you can have better controls over them. `private var _xxx` and make a public getter. This is what I do in Flutter if I am not too lazy. I don't make them private sometimes because it is not necessary? but I do use getters to do some calculations or conversions. It is great to do it for everything
 - `DateUtils.formatElapsedTime` to format time in milliseconds to a readble string
+- `Factory` to create `ViewModel` with parametres (custom view model)
+- `DataBinding` to remove more codes, you can put them in the xml inside `data` tag and use `@{() -> xxx}` to call methods
