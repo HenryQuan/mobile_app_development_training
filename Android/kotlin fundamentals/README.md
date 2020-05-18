@@ -94,3 +94,5 @@ val currentTimeString = Transformations.map(currentTime) { time ->
 ~~~
 - You can use transformation to format the time but I think I just skipped it because my time is a string. This is like writing some getters in Flutter because it is basically transforming some data fields
 - `vibrate` can be useful if used properly I guess
+
+## Chapter 6, Application Architecture (Persistence)
