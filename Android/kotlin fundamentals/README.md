@@ -85,3 +85,6 @@ The moment, I have been waiting for...
 - `DateUtils.formatElapsedTime` to format time in milliseconds to a readble string
 - `Factory` to create `ViewModel` with parametres (custom view model)
 - `DataBinding` to remove more codes, you can put them in the xml inside `data` tag and use `@{() -> xxx}` to call methods
+    - You can even remove observe functions so it works with observable objects and use `@{}` to set the value
+- You can put a formatting string in `strings.xml` like `\"%s\"` and `Score: %d` so you can put value in and be formatted nicely
+
