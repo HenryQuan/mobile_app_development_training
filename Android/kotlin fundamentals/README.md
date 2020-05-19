@@ -97,3 +97,8 @@ val currentTimeString = Transformations.map(currentTime) { time ->
 
 ## Chapter 6, Application Architecture (Persistence)
 Database with `room`, I learnt about database in one of my courses but I haven't really used it in any apps yet so it might be a great chance to use it
+- `Entity` defines a table, `Query` requests data (table) and `Room` handles a lot for us
+- `DAO`, `SQLite` and Entity classes
+- `PrimaryKey` and `ColumnInfo`
+- `DAO` supports basic operations, insert, add and delete. You can add your own as well
+- It maps everything correctly and we can just use kotlin to control the databases
