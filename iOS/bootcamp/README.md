@@ -42,3 +42,15 @@ let t = Town()
 // Then you can t.name and more
 ~~~
 - The difference between a `class` and a `struct` is that `class` is a `reference type` but `struct` is a `value type` like `Int`. Class also supports inhertitance so struct is basically for a simple data type / data model
+- `MVC`, model-view-controller. `Design patterns` are great to solve many common problems. It is not a problem if the app is small but when it gets larger, it will cause lots of problems
+    - There is no single pattern that is good for use cases
+    - `Model`, data & logic
+    - `View`, the user interface
+        - It doesn't talk to the model directly and only interact with data through the controller
+    - `Controller`, handles events and touch
+    - `MVC` is good for reducing duplications
+~~~swift
+func name(a b: String)
+// a is visible outside and b is visible inside
+~~~
+- `mutating func xxx` lets your update the structure. It is my first time ever knowing this... since struct is a value type so it is a bit troublesome 
