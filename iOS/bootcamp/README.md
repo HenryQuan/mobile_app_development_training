@@ -24,3 +24,21 @@ It is focusing on `if else`, `switch`, `dictionary` and optionals. I was a bit c
 
 ## Section 9: Design Patterns and Code Structuring
 This is really important for development because it is useful not only for iOS but almost everything UI related
+- Custom data type, struct
+~~~swift
+// This is a simple model
+struct Town {
+    let name: String = "Henry"
+    var citizens: [String] = ["Henry"]
+    var resources: [String: Int] = ["Ore": 42, "Wood": 100]
+
+    // You can also add functions
+    func xxx() {
+
+    }
+}
+
+let t = Town()
+// Then you can t.name and more
+~~~
+- The difference between a `class` and a `struct` is that `class` is a `reference type` but `struct` is a `value type` like `Int`. Class also supports inhertitance so struct is basically for a simple data type / data model

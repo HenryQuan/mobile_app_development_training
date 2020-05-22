@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     
     let quiz = [
-        "4 + 6 = 10",
-        "10 + 6 + 4 = 20",
-        "2 * 3 = 8",
+        Question(text: "4 + 6 = 10", answer: "True"),
+        Question(text: "10 + 6 + 4 = 15", answer: "False"),
+        Question(text: "2 * 3 = 8", answer: "True")
     ]
     
     var currentQuestion = 0
@@ -31,13 +31,28 @@ class ViewController: UIViewController {
     }
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        currentQuestion += 1
+        let answer = sender.currentTitle
+        let correctAnswer = quiz[currentQuestion].answer
+        
+        if answer == correctAnswer {
+            print("Right!")
+        } else {
+            print("Wrong!")
+        }
+        
+        // Check if it is the end, convert to index
+        if currentQuestion < quiz.count - 1 {
+            currentQuestion += 1
+        } else {
+            currentQuestion = 0
+        }
+        
         updateUI()
     }
     
     /** Update all UI items */
     func updateUI() {
-        questionLabel.text = quiz[currentQuestion]
+        questionLabel.text = quiz[currentQuestion].text
     }
 }
 
