@@ -32,6 +32,9 @@ This is another interesting one. I never used it before but it says it can use a
 ### Hardcore C++
 Before everything above was a thing, I think bigger companies either have two teams working on iOS and Android or they can do `hardcore C++`. The idea is similar to Xamarin Traditional I guess. You still write native UI but C++ libraries are shared between two platforms to be cross platform. However, I never tried it before so I don't know how to do it.
 
+### Kotlin Native
+This is similar to low level C++. Still native UI but kotlin is used to write the core. Some codes are shared and there are also platform specific codes.
+
 # What's the best choice?
 It depends on your need. `Flutter` is the best for me now because I don't use native features that much. However, if I would make an app that I will use frequently, it will be a native Android app because I own an Android phone and vice versa.
 - If you are a small team or just a solo like me, `React Native` and `Flutter` are great choices because they are low cost and you get two apps or more with one single codebase. After that, slowly convert it into native apps if possible
