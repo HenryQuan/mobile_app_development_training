@@ -13,18 +13,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var storyLabel: UILabel!
     @IBOutlet weak var choice1Button: UIButton!
     @IBOutlet weak var choice2Button: UIButton!
-    
-    let story = Story(title: "This is the title", choice1: "Yes", choice2: "No")
+
+    var brain = StoryBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        storyLabel.text = story.title
-        choice1Button.setTitle(story.choice1, for: .normal)
-        choice2Button.setTitle(story.choice2, for: .normal)
+        updateUI()
     }
 
     @IBAction func choiceMade(_ sender: UIButton) {
-        
+        if let selection = sender.currentTitle {
+            brain.nextStory(input: selection)
+            updateUI()
+        }
+    }
+    
+    /** Update UI based on current question number */
+    private func updateUI() {
+        let story = brain.currentStory
+        storyLabel.text = story.title
+        choice1Button.setTitle(story.choice1, for: .normal)
+        choice2Button.setTitle(story.choice2, for: .normal)
     }
 
 }
