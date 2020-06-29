@@ -54,3 +54,13 @@ func name(a b: String)
 // a is visible outside and b is visible inside
 ~~~
 - `mutating func xxx` lets your update the structure. It is my first time ever knowing this... since struct is a value type so it is a bit troublesome 
+
+## Section 11: Advanced Swift Programming - Classes, Inheritance & Advanced Optionals
+- `Class` doesn't have a default constructor with all fields but `struct` does
+- You need `mutating` to update a `struct`
+- `Class` is a reference but `struct` is a value like `int, double and more`
+- `Struct` is like a simple `class` so no inheritence and many more fancy features
+- `Struct` first and use `class` if you need more features
+- `Struct` is immature and passed by value but `class` is passed by reference and can be inherited
+### Write UI with code
+You just need to create it and remember to add it to `view`. So code or StoryBoard? I think they are both useful. For simple screens, it is fine to use storyboard but for really complicated screens, it might be a bit challenging to use storyboard. I tried it before and yes, it was hard. I think this is why you need to code the UI.
