@@ -127,7 +127,9 @@
                     </view>
                     <connections>
                         <outlet property="heightLabel" destination="Xcz-1j-2c9" id="EuD-oV-SN7"/>
+                        <outlet property="heightSlider" destination="Pky-qY-oVp" id="okC-Rw-JF5"/>
                         <outlet property="weightLabel" destination="LTF-aL-8qu" id="83J-Z7-KOK"/>
+                        <outlet property="weightSlider" destination="s2X-C5-Zcz" id="BfK-v7-J9I"/>
                         <segue destination="lkq-xS-Cin" kind="show" identifier="result" id="Y31-1N-f6i"/>
                     </connections>
                 </viewController>
@@ -185,6 +187,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onRecalculateButtonPressed:" destination="lkq-xS-Cin" eventType="touchUpInside" id="gfs-rF-FoI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.19980379940000001" green="0.48169642689999997" blue="0.77313679459999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

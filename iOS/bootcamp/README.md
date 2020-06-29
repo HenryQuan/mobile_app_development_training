@@ -62,5 +62,6 @@ func name(a b: String)
 - `Struct` is like a simple `class` so no inheritence and many more fancy features
 - `Struct` first and use `class` if you need more features
 - `Struct` is immature and passed by value but `class` is passed by reference and can be inherited
-### Write UI with code
-You just need to create it and remember to add it to `view`. So code or StoryBoard? I think they are both useful. For simple screens, it is fine to use storyboard but for really complicated screens, it might be a bit challenging to use storyboard. I tried it before and yes, it was hard. I think this is why you need to code the UI.
+### Write UI with code or storyboard
+You just need to create it and remember to add it to `view`. So code or StoryBoard? I think they are both useful. For simple screens, it is fine to use storyboard but for really complicated screens, it might be a bit challenging to use storyboard. I tried it before and yes, it was hard. I think this is why you need to code the UI. Also, for a team, it might be better to code the UI because storyboard generates random ids and there will be lots of problems
+
