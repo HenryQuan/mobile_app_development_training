@@ -102,3 +102,4 @@ Database with `room`, I learnt about database in one of my courses but I haven't
 - `PrimaryKey` and `ColumnInfo`
 - `DAO` supports basic operations, insert, add and delete. You can add your own as well
 - It maps everything correctly and we can just use kotlin to control the databases
+- Use `<merge>` to prevent duplication. For example, if you want to have two button under a linear layout, you don't need to wrap them in a linear layout but instead, you can just use `<merge>`. It is kinda similar to `<>` in react native

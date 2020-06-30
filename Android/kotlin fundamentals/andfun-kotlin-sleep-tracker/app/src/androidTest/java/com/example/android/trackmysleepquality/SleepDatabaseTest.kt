@@ -47,12 +47,13 @@ class SleepDatabaseTest {
         // Using an in-memory database because the information stored here disappears when the
         // process is killed.
         db = Room.inMemoryDatabaseBuilder(context, SleepDataBase::class.java)
-                // Allowing main thread queries, just for testing.
+                // Allowing main thread queries, just and ONLY for testing
                 .allowMainThreadQueries()
                 .build()
         sleepDao = db.sleepDatabaseDao
     }
 
+    // After the test is done, this will be run
     @After
     @Throws(IOException::class)
     fun closeDb() {
