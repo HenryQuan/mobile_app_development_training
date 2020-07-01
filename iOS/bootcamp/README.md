@@ -55,6 +55,8 @@ func name(a b: String)
 ~~~
 - `mutating func xxx` lets your update the structure. It is my first time ever knowing this... since struct is a value type so it is a bit troublesome 
 
+## Section 10: iOS App Design Pattern Challenge
+
 ## Section 11: Advanced Swift Programming - Classes, Inheritance & Advanced Optionals
 - `Class` doesn't have a default constructor with all fields but `struct` does
 - You need `mutating` to update a `struct`
@@ -76,3 +78,5 @@ if let safeOptional = optional {
 // Use default value if nil
 optional ?? defaultValue
 ~~~
+
+## Section 12: Advanced Swift Programming Challenge
