@@ -15,9 +15,16 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var tenPctButton: UIButton!
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
+    
+    private func resetButtonSelection() {
+        zeroPctButton.isSelected = false
+        tenPctButton.isSelected = false
+        twentyPctButton.isSelected = false
+    }
 
     @IBAction func onTipChanged(_ sender: UIButton) {
-        
+        resetButtonSelection()
+        sender.isSelected = true
     }
     
     @IBAction func onStepperValueChanged(_ sender: UIStepper) {
