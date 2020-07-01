@@ -10,17 +10,20 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
+    var tip: Tips?
+    
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var settingsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        totalLabel.text = String(format: "%.2f", tip?.amountPerPerson ?? 0.0)
+        settingsLabel.text = tip?.getDescription() ?? ""
     }
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
