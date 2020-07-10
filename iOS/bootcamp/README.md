@@ -85,3 +85,7 @@ optional ?? defaultValue
 This section is interesting and is very important because you will need to deal with Networking and JSON a lot in the future.
 - `Delegate`, I still remember when I first started making iOS apps. There were so many delegates and I couldn't understand but now it is clear. You have delegate so that the controller can control the view. That's why you set `xxx.delegate = self`
     - Apple uses a lot of `delegates` and I don't know if this is good or bad
+    - It feels like an `interface` but maybe not
+    - Struct can also implement an interface which is great
+    - You can implement multiple protocols like interface
+- `Delegate design pattern`, another design pattern! Basically, you can have a few features that are not implemented but you have lots of default behaviours. You let another classes to implement it and this way, maximise code reuse and also seperate UI from logic. This is also Apple's favourite :)
