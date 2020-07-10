@@ -89,3 +89,25 @@ This section is interesting and is very important because you will need to deal 
     - Struct can also implement an interface which is great
     - You can implement multiple protocols like interface
 - `Delegate design pattern`, another design pattern! Basically, you can have a few features that are not implemented but you have lots of default behaviours. You let another classes to implement it and this way, maximise code reuse and also seperate UI from logic. This is also Apple's favourite :)
+- `API`, application programming interface (making software with interface with internal system). We were using `OpenWeather` for the weather app. 
+- `Networking`, request data to a web server. In Swift, we use a URLSession from a URL. The first time I saw a callback, I was confused and wondered why it was not returning anything. A callback is basically just a function. If it takes a long time to get the result, the program will keep running and call that function when the processing has been completed.
+- `Closure` is a function (lambda). You can pass a function into another function and also return a function. It is a higher order function (I think this is the name). Swift is a functional programming language so there are a lot of lambda functions. 
+~~~swift
+// A simple closure
+function(1, 2, { (a, b) -> Int in
+    return a + b
+})
+
+// Same as above
+function(1, 2, { (a, b) in a + b })
+
+// Same as above
+function(1, 2, { $0 * $1 })
+
+// Still the same, the magic of Swift
+function(1, 2) { $0 * $1 }
+
+// You can use map, filter, reduce to simplify many complicated tasks
+// I cannot remember if you can write closures like this in Swift 2.0
+~~~
+- `JSON` is really popular (JavaScript OP) but `XML` is catching up. Implement `Decodable` to decode JSON string to a Swift data type. I can use my tool to generate Swift structures. 
