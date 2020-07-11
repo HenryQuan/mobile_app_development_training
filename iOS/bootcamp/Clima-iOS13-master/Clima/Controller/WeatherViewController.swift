@@ -22,6 +22,12 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func searchPressed(_ sender: Any) {
+        let manager = WeatherManager()
+        if let input = searchTextField.text {
+            manager.fetchWeather(cityName: input)
+        }
+        
+        // This clears the text field so request first
         searchTextField.endEditing(true)
     }
     
