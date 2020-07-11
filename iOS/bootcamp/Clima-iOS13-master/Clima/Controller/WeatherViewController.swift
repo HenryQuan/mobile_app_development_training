@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManagerDelegate {
+class WeatherViewController: UIViewController {
 
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -33,7 +33,11 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
         searchTextField.endEditing(true)
     }
     
-    // MARK: Textfield delegate
+}
+
+// MARK: - Textfield delegate
+
+extension WeatherViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchPressed(textField)
@@ -57,16 +61,25 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
             return true
         }
     }
-    
-    // MARK: Weather manager delegate
+}
+
+// MARK: - Weather manager delegate
+
+extension WeatherViewController: WeatherManagerDelegate {
     
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
         print(weather.conditionName)
+        
+        // So kinda like asking the UI to update from another Thread
+        // Otherwise, the UI will be frozen
+        DispatchQueue.main.async {
+            self.temperatureLabel.text = weather.temperatureString
+            self.conditionImageView.image = UIImage(systemName: weather.conditionName)
+            self.cityLabel.text = weather.cityName
+        }
     }
     
     func didFailed(with error: Error) {
         print(error)
     }
-    
 }
-
