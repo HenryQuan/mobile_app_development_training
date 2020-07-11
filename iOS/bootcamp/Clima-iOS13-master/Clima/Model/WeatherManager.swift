@@ -9,7 +9,8 @@
 import Foundation
 
 protocol WeatherManagerDelegate {
-    func didUpdateWeather(weather: WeatherModel)
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
+    func didFailed(with error: Error)
 }
 
 struct WeatherManager {
@@ -17,24 +18,25 @@ struct WeatherManager {
     
     var delegate: WeatherManagerDelegate?
     
-    func fetchWeather(cityName: String) {
+    func fetchWeather(from cityName: String) {
         let urlString = "\(weatherUrl)&q=\(cityName)"
-        performRequest(urlString: urlString)
+        performRequest(with: urlString)
     }
     
-    private func performRequest(urlString: String) {
+    private func performRequest(with urlString: String) {
         print(urlString)
         if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
                 // Make sure the request was successful
                 if error != nil {
-                    print(error!)
+                    self.delegate?.didFailed(with: error!)
+                    return
                 } else {
                     if let safeData = data {
-                        if let weather = self.parseJSON(data: safeData) {
+                        if let weather = self.parseJSON(safeData) {
                             // How to pass this back???
-                            self.delegate?.didUpdateWeather(weather: weather)
+                            self.delegate?.didUpdateWeather(self, weather: weather)
                         }
                     }
                 }
@@ -45,7 +47,7 @@ struct WeatherManager {
         }
     }
     
-    private func parseJSON(data: Data) -> WeatherModel? {
+    private func parseJSON(_ data: Data) -> WeatherModel? {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: data)
@@ -55,7 +57,7 @@ struct WeatherManager {
             
             return WeatherModel(conditionId: id, cityName: name, temperature: temp)
         } catch {
-            print(error)
+            delegate?.didFailed(with: error)
             return nil
         }
     }

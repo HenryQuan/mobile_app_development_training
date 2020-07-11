@@ -121,4 +121,6 @@ var conditionName: String {
 The data is now only available inside the closure but with delegate pattern, you can get it out by calling the protocol function.
 - `typealias` Codable = Decodable & Encodable, you can combine two types together
 - Put the protocol in the same file as the delegate so don't create another file (If you think about it, there will be so many files if you create a file for every protocol)
-- `Internal and external parametre`, 
+- `Internal and external parametre`, this is useful because the external name can be long and descriptive whereas the internal name can be shorter. Before, Objective-C couldn't do this so function names were quite lengthy.
+- You use external names to make the function name more English like. For example, `func didFailed(with error: Error)` is better than `func didFailedWithError(error: Error)` because `error` is repeated twice.
+ 

@@ -25,8 +25,8 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
     }
 
     @IBAction func searchPressed(_ sender: Any) {
-        if let input = searchTextField.text {
-            weatherManager.fetchWeather(cityName: input)
+        if let cityName = searchTextField.text {
+            weatherManager.fetchWeather(from: cityName)
         }
         
         // This clears the text field so request first
@@ -60,8 +60,12 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
     
     // MARK: Weather manager delegate
     
-    func didUpdateWeather(weather: WeatherModel) {
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
         print(weather.conditionName)
+    }
+    
+    func didFailed(with error: Error) {
+        print(error)
     }
     
 }
