@@ -117,3 +117,8 @@ var conditionName: String {
     return getConditionName(weatherId: conditionId)
 }
 ~~~
+# How to pass data back?
+The data is now only available inside the closure but with delegate pattern, you can get it out by calling the protocol function.
+- `typealias` Codable = Decodable & Encodable, you can combine two types together
+- Put the protocol in the same file as the delegate so don't create another file (If you think about it, there will be so many files if you create a file for every protocol)
+- `Internal and external parametre`, 

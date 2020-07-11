@@ -8,30 +8,32 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController, UITextFieldDelegate {
+class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManagerDelegate {
 
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     
+    var weatherManager = WeatherManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchTextField.delegate = self
+        weatherManager.delegate = self
     }
 
     @IBAction func searchPressed(_ sender: Any) {
-        let manager = WeatherManager()
         if let input = searchTextField.text {
-            manager.fetchWeather(cityName: input)
+            weatherManager.fetchWeather(cityName: input)
         }
         
         // This clears the text field so request first
         searchTextField.endEditing(true)
     }
     
-    // MARK: Text field deletgate
+    // MARK: Textfield delegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchPressed(textField)
@@ -54,6 +56,12 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
         } else {
             return true
         }
+    }
+    
+    // MARK: Weather manager delegate
+    
+    func didUpdateWeather(weather: WeatherModel) {
+        print(weather.conditionName)
     }
     
 }
