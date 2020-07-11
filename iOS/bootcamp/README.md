@@ -111,3 +111,9 @@ function(1, 2) { $0 * $1 }
 // I cannot remember if you can write closures like this in Swift 2.0
 ~~~
 - `JSON` is really popular (JavaScript OP) but `XML` is catching up. Implement `Decodable` to decode JSON string to a Swift data type. I can use my tool to generate Swift structures. 
+~~~swift
+// Computed property
+var conditionName: String {
+    return getConditionName(weatherId: conditionId)
+}
+~~~
