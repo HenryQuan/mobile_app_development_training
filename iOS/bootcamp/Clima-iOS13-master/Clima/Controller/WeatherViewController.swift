@@ -50,6 +50,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
         if let location = locations.last {
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
+            self.weatherManager.fetchWeather(latitude: lat, longitude: lon)
         }
     }
     
