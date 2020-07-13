@@ -169,3 +169,5 @@ extension Double {
 - `Property List` saves some configurations in a dictionary for the app
 
 ## Section 14: Networking and API Challenge
+
+## Section 15: Firebase Cloud Firestore, TableViews and Cocoapod Dependencies
