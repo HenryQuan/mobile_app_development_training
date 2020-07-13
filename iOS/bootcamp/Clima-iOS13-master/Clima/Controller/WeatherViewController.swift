@@ -40,6 +40,9 @@ class WeatherViewController: UIViewController {
         searchTextField.endEditing(true)
     }
     
+    @IBAction func locationPressed(_ sender: UIButton) {
+        locationManager.requestLocation()
+    }
 }
 
 // MARK: - CLLocationManager delegate
