@@ -165,3 +165,4 @@ extension Double {
 ~~~
 - By using extensions, you can also seperate implementations for delegates so you main view controller will have less codes and it is easier to manage. This results in improved readablity.
 - Use `// MARK: - xxx` to seperate the file into multiple sections.
+- `CoreLocation` to get current location
