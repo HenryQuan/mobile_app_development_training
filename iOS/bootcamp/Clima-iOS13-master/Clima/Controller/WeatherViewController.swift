@@ -51,6 +51,8 @@ extension WeatherViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // This should be the most accurate one
         if let location = locations.last {
+            // Stop once the location has been found so that we can request it again later
+            locationManager.stopUpdatingLocation()
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
             self.weatherManager.fetchWeather(latitude: lat, longitude: lon)
